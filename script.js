@@ -1,4 +1,3 @@
-const $activeElements = document.querySelectorAll('.rate');
 const $buttonsRate = document.querySelectorAll('#rate');
 
 function handleRate() {
@@ -8,9 +7,7 @@ function handleRate() {
     button.addEventListener('click', () => {
       window.localStorage.setItem('selectedRate', rateValue);
 
-      console.log($activeElements);
-
-      $activeElements.forEach((el) => {
+      $buttonsRate.forEach((el) => {
         el.classList.remove('active');
       });
       button.classList.add('active');
